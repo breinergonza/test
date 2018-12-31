@@ -1,0 +1,12 @@
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\5-InterfazComun.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\5-InterfazComun.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\AutoMapper.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\AutoMapper.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\System.ValueTuple.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\obj\Release\5-InterfazComun.csproj.CoreCompileInputs.cache
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\obj\Release\5-InterfazComun.csproj.CopyComplete
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\obj\Release\5-InterfazComun.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\obj\Release\5-InterfazComun.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\Newtonsoft.Json.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\bin\Release\Newtonsoft.Json.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\5-InterfazComun\obj\Release\5-InterfazComun.csprojAssemblyReference.cache

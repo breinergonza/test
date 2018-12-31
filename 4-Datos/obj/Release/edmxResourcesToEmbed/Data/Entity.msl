@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloDBStoreContainer" CdmEntityContainer="Entitys">
+    <EntitySetMapping Name="DimAccount">
+      <EntityTypeMapping TypeName="ModeloDB.DimAccount">
+        <MappingFragment StoreEntitySet="DimAccount">
+          <ScalarProperty Name="AccountKey" ColumnName="AccountKey" />
+          <ScalarProperty Name="ParentAccountKey" ColumnName="ParentAccountKey" />
+          <ScalarProperty Name="AccountLabel" ColumnName="AccountLabel" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="CustomMembers" ColumnName="CustomMembers" />
+          <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+          <ScalarProperty Name="CustomMemberOptions" ColumnName="CustomMemberOptions" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimChannel">
+      <EntityTypeMapping TypeName="ModeloDB.DimChannel">
+        <MappingFragment StoreEntitySet="DimChannel">
+          <ScalarProperty Name="ChannelKey" ColumnName="ChannelKey" />
+          <ScalarProperty Name="ChannelLabel" ColumnName="ChannelLabel" />
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="ChannelDescription" ColumnName="ChannelDescription" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimCurrency">
+      <EntityTypeMapping TypeName="ModeloDB.DimCurrency">
+        <MappingFragment StoreEntitySet="DimCurrency">
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="CurrencyLabel" ColumnName="CurrencyLabel" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyDescription" ColumnName="CurrencyDescription" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimCustomer">
+      <EntityTypeMapping TypeName="ModeloDB.DimCustomer">
+        <MappingFragment StoreEntitySet="DimCustomer">
+          <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+          <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+          <ScalarProperty Name="CustomerLabel" ColumnName="CustomerLabel" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NameStyle" ColumnName="NameStyle" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="YearlyIncome" ColumnName="YearlyIncome" />
+          <ScalarProperty Name="TotalChildren" ColumnName="TotalChildren" />
+          <ScalarProperty Name="NumberChildrenAtHome" ColumnName="NumberChildrenAtHome" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="HouseOwnerFlag" ColumnName="HouseOwnerFlag" />
+          <ScalarProperty Name="NumberCarsOwned" ColumnName="NumberCarsOwned" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DateFirstPurchase" ColumnName="DateFirstPurchase" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimDate">
+      <EntityTypeMapping TypeName="ModeloDB.DimDate">
+        <MappingFragment StoreEntitySet="DimDate">
+          <ScalarProperty Name="Datekey" ColumnName="Datekey" />
+          <ScalarProperty Name="FullDateLabel" ColumnName="FullDateLabel" />
+          <ScalarProperty Name="DateDescription" ColumnName="DateDescription" />
+          <ScalarProperty Name="CalendarYear" ColumnName="CalendarYear" />
+          <ScalarProperty Name="CalendarYearLabel" ColumnName="CalendarYearLabel" />
+          <ScalarProperty Name="CalendarHalfYear" ColumnName="CalendarHalfYear" />
+          <ScalarProperty Name="CalendarHalfYearLabel" ColumnName="CalendarHalfYearLabel" />
+          <ScalarProperty Name="CalendarQuarter" ColumnName="CalendarQuarter" />
+          <ScalarProperty Name="CalendarQuarterLabel" ColumnName="CalendarQuarterLabel" />
+          <ScalarProperty Name="CalendarMonth" ColumnName="CalendarMonth" />
+          <ScalarProperty Name="CalendarMonthLabel" ColumnName="CalendarMonthLabel" />
+          <ScalarProperty Name="CalendarWeek" ColumnName="CalendarWeek" />
+          <ScalarProperty Name="CalendarWeekLabel" ColumnName="CalendarWeekLabel" />
+          <ScalarProperty Name="CalendarDayOfWeek" ColumnName="CalendarDayOfWeek" />
+          <ScalarProperty Name="CalendarDayOfWeekLabel" ColumnName="CalendarDayOfWeekLabel" />
+          <ScalarProperty Name="FiscalYear" ColumnName="FiscalYear" />
+          <ScalarProperty Name="FiscalYearLabel" ColumnName="FiscalYearLabel" />
+          <ScalarProperty Name="FiscalHalfYear" ColumnName="FiscalHalfYear" />
+          <ScalarProperty Name="FiscalHalfYearLabel" ColumnName="FiscalHalfYearLabel" />
+          <ScalarProperty Name="FiscalQuarter" ColumnName="FiscalQuarter" />
+          <ScalarProperty Name="FiscalQuarterLabel" ColumnName="FiscalQuarterLabel" />
+          <ScalarProperty Name="FiscalMonth" ColumnName="FiscalMonth" />
+          <ScalarProperty Name="FiscalMonthLabel" ColumnName="FiscalMonthLabel" />
+          <ScalarProperty Name="IsWorkDay" ColumnName="IsWorkDay" />
+          <ScalarProperty Name="IsHoliday" ColumnName="IsHoliday" />
+          <ScalarProperty Name="HolidayName" ColumnName="HolidayName" />
+          <ScalarProperty Name="EuropeSeason" ColumnName="EuropeSeason" />
+          <ScalarProperty Name="NorthAmericaSeason" ColumnName="NorthAmericaSeason" />
+          <ScalarProperty Name="AsiaSeason" ColumnName="AsiaSeason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimEmployee">
+      <EntityTypeMapping TypeName="ModeloDB.DimEmployee">
+        <MappingFragment StoreEntitySet="DimEmployee">
+          <ScalarProperty Name="EmployeeKey" ColumnName="EmployeeKey" />
+          <ScalarProperty Name="ParentEmployeeKey" ColumnName="ParentEmployeeKey" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+          <ScalarProperty Name="EmergencyContactPhone" ColumnName="EmergencyContactPhone" />
+          <ScalarProperty Name="SalariedFlag" ColumnName="SalariedFlag" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PayFrequency" ColumnName="PayFrequency" />
+          <ScalarProperty Name="BaseRate" ColumnName="BaseRate" />
+          <ScalarProperty Name="VacationHours" ColumnName="VacationHours" />
+          <ScalarProperty Name="CurrentFlag" ColumnName="CurrentFlag" />
+          <ScalarProperty Name="SalesPersonFlag" ColumnName="SalesPersonFlag" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="ProfileUrl" ColumnName="ProfileUrl" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimEntity">
+      <EntityTypeMapping TypeName="ModeloDB.DimEntity">
+        <MappingFragment StoreEntitySet="DimEntity">
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="EntityLabel" ColumnName="EntityLabel" />
+          <ScalarProperty Name="ParentEntityKey" ColumnName="ParentEntityKey" />
+          <ScalarProperty Name="ParentEntityLabel" ColumnName="ParentEntityLabel" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="EntityDescription" ColumnName="EntityDescription" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimGeography">
+      <EntityTypeMapping TypeName="ModeloDB.DimGeography">
+        <MappingFragment StoreEntitySet="DimGeography">
+          <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+          <ScalarProperty Name="GeographyTypeKey" ColumnName="GeographyTypeKey" />
+          <ScalarProperty Name="GeographyType" ColumnName="GeographyType" />
+          <ScalarProperty Name="ContinentName" ColumnName="ContinentName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateProvinceName" ColumnName="StateProvinceName" />
+          <ScalarProperty Name="RegionCountryName" ColumnName="RegionCountryName" />
+          <ScalarProperty Name="Geometry" ColumnName="Geometry" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimMachine">
+      <EntityTypeMapping TypeName="ModeloDB.DimMachine">
+        <MappingFragment StoreEntitySet="DimMachine">
+          <ScalarProperty Name="MachineKey" ColumnName="MachineKey" />
+          <ScalarProperty Name="MachineLabel" ColumnName="MachineLabel" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="MachineType" ColumnName="MachineType" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="MachineOS" ColumnName="MachineOS" />
+          <ScalarProperty Name="MachineSource" ColumnName="MachineSource" />
+          <ScalarProperty Name="MachineHardware" ColumnName="MachineHardware" />
+          <ScalarProperty Name="MachineSoftware" ColumnName="MachineSoftware" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ServiceStartDate" ColumnName="ServiceStartDate" />
+          <ScalarProperty Name="DecommissionDate" ColumnName="DecommissionDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimOutage">
+      <EntityTypeMapping TypeName="ModeloDB.DimOutage">
+        <MappingFragment StoreEntitySet="DimOutage">
+          <ScalarProperty Name="OutageKey" ColumnName="OutageKey" />
+          <ScalarProperty Name="OutageLabel" ColumnName="OutageLabel" />
+          <ScalarProperty Name="OutageName" ColumnName="OutageName" />
+          <ScalarProperty Name="OutageDescription" ColumnName="OutageDescription" />
+          <ScalarProperty Name="OutageType" ColumnName="OutageType" />
+          <ScalarProperty Name="OutageTypeDescription" ColumnName="OutageTypeDescription" />
+          <ScalarProperty Name="OutageSubType" ColumnName="OutageSubType" />
+          <ScalarProperty Name="OutageSubTypeDescription" ColumnName="OutageSubTypeDescription" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimProduct">
+      <EntityTypeMapping TypeName="ModeloDB.DimProduct">
+        <MappingFragment StoreEntitySet="DimProduct">
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="StyleName" ColumnName="StyleName" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="SizeRange" ColumnName="SizeRange" />
+          <ScalarProperty Name="SizeUnitMeasureID" ColumnName="SizeUnitMeasureID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="WeightUnitMeasureID" ColumnName="WeightUnitMeasureID" />
+          <ScalarProperty Name="UnitOfMeasureID" ColumnName="UnitOfMeasureID" />
+          <ScalarProperty Name="UnitOfMeasureName" ColumnName="UnitOfMeasureName" />
+          <ScalarProperty Name="StockTypeID" ColumnName="StockTypeID" />
+          <ScalarProperty Name="StockTypeName" ColumnName="StockTypeName" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="AvailableForSaleDate" ColumnName="AvailableForSaleDate" />
+          <ScalarProperty Name="StopSaleDate" ColumnName="StopSaleDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="ProductURL" ColumnName="ProductURL" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimProductCategory">
+      <EntityTypeMapping TypeName="ModeloDB.DimProductCategory">
+        <MappingFragment StoreEntitySet="DimProductCategory">
+          <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+          <ScalarProperty Name="ProductCategoryLabel" ColumnName="ProductCategoryLabel" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+          <ScalarProperty Name="ProductCategoryDescription" ColumnName="ProductCategoryDescription" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimProductSubcategory">
+      <EntityTypeMapping TypeName="ModeloDB.DimProductSubcategory">
+        <MappingFragment StoreEntitySet="DimProductSubcategory">
+          <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+          <ScalarProperty Name="ProductSubcategoryLabel" ColumnName="ProductSubcategoryLabel" />
+          <ScalarProperty Name="ProductSubcategoryName" ColumnName="ProductSubcategoryName" />
+          <ScalarProperty Name="ProductSubcategoryDescription" ColumnName="ProductSubcategoryDescription" />
+          <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimPromotion">
+      <EntityTypeMapping TypeName="ModeloDB.DimPromotion">
+        <MappingFragment StoreEntitySet="DimPromotion">
+          <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+          <ScalarProperty Name="PromotionLabel" ColumnName="PromotionLabel" />
+          <ScalarProperty Name="PromotionName" ColumnName="PromotionName" />
+          <ScalarProperty Name="PromotionDescription" ColumnName="PromotionDescription" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="PromotionType" ColumnName="PromotionType" />
+          <ScalarProperty Name="PromotionCategory" ColumnName="PromotionCategory" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="MaxQuantity" ColumnName="MaxQuantity" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimSalesTerritory">
+      <EntityTypeMapping TypeName="ModeloDB.DimSalesTerritory">
+        <MappingFragment StoreEntitySet="DimSalesTerritory">
+          <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+          <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+          <ScalarProperty Name="SalesTerritoryLabel" ColumnName="SalesTerritoryLabel" />
+          <ScalarProperty Name="SalesTerritoryName" ColumnName="SalesTerritoryName" />
+          <ScalarProperty Name="SalesTerritoryRegion" ColumnName="SalesTerritoryRegion" />
+          <ScalarProperty Name="SalesTerritoryCountry" ColumnName="SalesTerritoryCountry" />
+          <ScalarProperty Name="SalesTerritoryGroup" ColumnName="SalesTerritoryGroup" />
+          <ScalarProperty Name="SalesTerritoryLevel" ColumnName="SalesTerritoryLevel" />
+          <ScalarProperty Name="SalesTerritoryManager" ColumnName="SalesTerritoryManager" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimScenario">
+      <EntityTypeMapping TypeName="ModeloDB.DimScenario">
+        <MappingFragment StoreEntitySet="DimScenario">
+          <ScalarProperty Name="ScenarioKey" ColumnName="ScenarioKey" />
+          <ScalarProperty Name="ScenarioLabel" ColumnName="ScenarioLabel" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="ScenarioDescription" ColumnName="ScenarioDescription" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimStore">
+      <EntityTypeMapping TypeName="ModeloDB.DimStore">
+        <MappingFragment StoreEntitySet="DimStore">
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+          <ScalarProperty Name="StoreManager" ColumnName="StoreManager" />
+          <ScalarProperty Name="StoreType" ColumnName="StoreType" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="StoreDescription" ColumnName="StoreDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ZipCodeExtension" ColumnName="ZipCodeExtension" />
+          <ScalarProperty Name="StorePhone" ColumnName="StorePhone" />
+          <ScalarProperty Name="StoreFax" ColumnName="StoreFax" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="CloseReason" ColumnName="CloseReason" />
+          <ScalarProperty Name="EmployeeCount" ColumnName="EmployeeCount" />
+          <ScalarProperty Name="SellingAreaSize" ColumnName="SellingAreaSize" />
+          <ScalarProperty Name="LastRemodelDate" ColumnName="LastRemodelDate" />
+          <ScalarProperty Name="GeoLocation" ColumnName="GeoLocation" />
+          <ScalarProperty Name="Geometry" ColumnName="Geometry" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactExchangeRate">
+      <EntityTypeMapping TypeName="ModeloDB.FactExchangeRate">
+        <MappingFragment StoreEntitySet="FactExchangeRate">
+          <ScalarProperty Name="ExchangeRateKey" ColumnName="ExchangeRateKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="AverageRate" ColumnName="AverageRate" />
+          <ScalarProperty Name="EndOfDayRate" ColumnName="EndOfDayRate" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactInventory">
+      <EntityTypeMapping TypeName="ModeloDB.FactInventory">
+        <MappingFragment StoreEntitySet="FactInventory">
+          <ScalarProperty Name="InventoryKey" ColumnName="InventoryKey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="OnHandQuantity" ColumnName="OnHandQuantity" />
+          <ScalarProperty Name="OnOrderQuantity" ColumnName="OnOrderQuantity" />
+          <ScalarProperty Name="SafetyStockQuantity" ColumnName="SafetyStockQuantity" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="DaysInStock" ColumnName="DaysInStock" />
+          <ScalarProperty Name="MinDayInStock" ColumnName="MinDayInStock" />
+          <ScalarProperty Name="MaxDayInStock" ColumnName="MaxDayInStock" />
+          <ScalarProperty Name="Aging" ColumnName="Aging" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactITMachine">
+      <EntityTypeMapping TypeName="ModeloDB.FactITMachine">
+        <MappingFragment StoreEntitySet="FactITMachine">
+          <ScalarProperty Name="ITMachinekey" ColumnName="ITMachinekey" />
+          <ScalarProperty Name="MachineKey" ColumnName="MachineKey" />
+          <ScalarProperty Name="Datekey" ColumnName="Datekey" />
+          <ScalarProperty Name="CostAmount" ColumnName="CostAmount" />
+          <ScalarProperty Name="CostType" ColumnName="CostType" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactITSLA">
+      <EntityTypeMapping TypeName="ModeloDB.FactITSLA">
+        <MappingFragment StoreEntitySet="FactITSLA">
+          <ScalarProperty Name="ITSLAkey" ColumnName="ITSLAkey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="MachineKey" ColumnName="MachineKey" />
+          <ScalarProperty Name="OutageKey" ColumnName="OutageKey" />
+          <ScalarProperty Name="OutageStartTime" ColumnName="OutageStartTime" />
+          <ScalarProperty Name="OutageEndTime" ColumnName="OutageEndTime" />
+          <ScalarProperty Name="DownTime" ColumnName="DownTime" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactOnlineSales">
+      <EntityTypeMapping TypeName="ModeloDB.FactOnlineSales">
+        <MappingFragment StoreEntitySet="FactOnlineSales">
+          <ScalarProperty Name="OnlineSalesKey" ColumnName="OnlineSalesKey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+          <ScalarProperty Name="SalesOrderLineNumber" ColumnName="SalesOrderLineNumber" />
+          <ScalarProperty Name="SalesQuantity" ColumnName="SalesQuantity" />
+          <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+          <ScalarProperty Name="ReturnQuantity" ColumnName="ReturnQuantity" />
+          <ScalarProperty Name="ReturnAmount" ColumnName="ReturnAmount" />
+          <ScalarProperty Name="DiscountQuantity" ColumnName="DiscountQuantity" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactSales">
+      <EntityTypeMapping TypeName="ModeloDB.FactSales">
+        <MappingFragment StoreEntitySet="FactSales">
+          <ScalarProperty Name="SalesKey" ColumnName="SalesKey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="channelKey" ColumnName="channelKey" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="SalesQuantity" ColumnName="SalesQuantity" />
+          <ScalarProperty Name="ReturnQuantity" ColumnName="ReturnQuantity" />
+          <ScalarProperty Name="ReturnAmount" ColumnName="ReturnAmount" />
+          <ScalarProperty Name="DiscountQuantity" ColumnName="DiscountQuantity" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactSalesQuota">
+      <EntityTypeMapping TypeName="ModeloDB.FactSalesQuota">
+        <MappingFragment StoreEntitySet="FactSalesQuota">
+          <ScalarProperty Name="SalesQuotaKey" ColumnName="SalesQuotaKey" />
+          <ScalarProperty Name="ChannelKey" ColumnName="ChannelKey" />
+          <ScalarProperty Name="StoreKey" ColumnName="StoreKey" />
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="ScenarioKey" ColumnName="ScenarioKey" />
+          <ScalarProperty Name="SalesQuantityQuota" ColumnName="SalesQuantityQuota" />
+          <ScalarProperty Name="SalesAmountQuota" ColumnName="SalesAmountQuota" />
+          <ScalarProperty Name="GrossMarginQuota" ColumnName="GrossMarginQuota" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactStrategyPlan">
+      <EntityTypeMapping TypeName="ModeloDB.FactStrategyPlan">
+        <MappingFragment StoreEntitySet="FactStrategyPlan">
+          <ScalarProperty Name="StrategyPlanKey" ColumnName="StrategyPlanKey" />
+          <ScalarProperty Name="Datekey" ColumnName="Datekey" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="ScenarioKey" ColumnName="ScenarioKey" />
+          <ScalarProperty Name="AccountKey" ColumnName="AccountKey" />
+          <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ETLLoadID" ColumnName="ETLLoadID" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

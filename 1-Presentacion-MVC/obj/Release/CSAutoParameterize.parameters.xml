@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Entitys-Web.config Connection String" description="Entitys Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=testdat.database.windows.net;initial catalog=testDB;user id=began;password=Admin123$;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Breitner\\TestStefan\\Aplicativo-Pruebas-Azure\\1-Presentacion-MVC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entitys']/@connectionString" />
+  </parameter>
+</parameters>

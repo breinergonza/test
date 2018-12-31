@@ -1,0 +1,372 @@
+.asColorPicker-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.asColorPicker_hideInput { display: none; }
+
+.asColorPicker_hideInput .asColorPicker-clear { display: none; }
+
+.asColorPicker-dropdown {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    display: none;
+    position: absolute;
+    user-select: none;
+    z-index: 9999;
+}
+
+.asColorPicker-dropdown * {
+    margin: 0;
+    padding: 0;
+}
+
+.asColorPicker_open { display: block; }
+
+.asColorPicker-mask {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9998;
+}
+
+.asColorPicker-trigger {
+    display: inline-block;
+    position: relative;
+}
+
+.asColorPicker-trigger {
+    background-image: url('../images/transparent.png');
+    cursor: pointer;
+    height: 20px;
+    width: 18px;
+}
+
+.asColorPicker-trigger span {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.asColorPicker-input,
+.asColorPicker-trigger { vertical-align: middle; }
+
+.asColorPicker-clear {
+    color: #777;
+    display: none;
+    position: absolute;
+    right: 26px;
+    text-decoration: none;
+    top: 0;
+}
+
+.asColorPicker-clear:after { content: 'x'; }
+
+.asColorPicker-wrap:hover .asColorPicker-clear { display: inline-block; }
+
+.asColorPicker-preview {
+    float: left;
+    list-style: none;
+}
+
+.asColorPicker-preview li {
+    background-image: url('../images/transparent.png');
+    display: inline-block;
+    *display: inline;
+    vertical-align: top;
+    *zoom: 1;
+}
+
+.asColorPicker-preview li span {
+    display: block;
+    height: 100%;
+}
+
+.asColorPicker-preview-previous { cursor: pointer; }
+
+.asColorPicker-palettes ul { display: block; }
+
+.asColorPicker-palettes ul:before,
+.asColorPicker-palettes ul:after {
+    content: "";
+    display: table;
+}
+
+.asColorPicker-palettes ul:after { clear: both; }
+
+.asColorPicker-palettes li {
+    background-image: url('../images/transparent.png');
+    cursor: pointer;
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.asColorPicker-palettes li span {
+    display: block;
+    height: 100%;
+}
+
+.asColorPicker-saturation {
+    background-image: url("../images/saturation.png");
+    clear: both;
+    display: inline-block;
+    *display: inline;
+    height: 175px;
+    position: relative;
+    width: 175px;
+    *zoom: 1;
+}
+
+.asColorPicker-saturation i { position: absolute; }
+
+.asColorPicker-hue,
+.asColorPicker-alpha {
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    height: 175px;
+    position: relative;
+    width: 20px;
+    *zoom: 1;
+}
+
+.asColorPicker-hue i,
+.asColorPicker-alpha i {
+    cursor: row-resize;
+    position: absolute;
+}
+
+.asColorPicker-hue { background-image: url('../images/hue.png'); }
+
+.asColorPicker-alpha { background-image: url('../images/alpha.png'); }
+
+.asColorPicker-buttons a,
+.asColorPicker-gradient-control a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.asColorPicker-gradient { display: none; }
+
+.asColorPicker-gradient_enable { display: block; }
+
+.asColorPicker-gradient-preview {
+    float: left;
+    height: 20px;
+}
+
+.asColorPicker-gradient-markers {
+    position: relative;
+    width: 100%;
+}
+
+.asColorPicker-gradient-marker {
+    outline: none;
+    position: absolute;
+}
+
+.asColorPicker-gradient-wheel {
+    border: 1px solid #bbbbbb;
+    border-radius: 100%;
+    float: left;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+.asColorPicker-gradient-wheel i {
+    border-radius: 100%;
+    height: 3px;
+    position: absolute;
+    width: 3px;
+}
+
+.asColorPicker-gradient-angle { float: left; }
+
+.asColorPicker-dropdown {
+    background: #fefefe;
+    border: 1px solid #bbbbbb;
+    max-width: 235px;
+    min-width: 205px;
+    padding: 10px;
+}
+
+[data-mode="palettes"] .asColorPicker-dropdown {
+    max-width: auto;
+    min-width: auto;
+}
+
+.asColorPicker-trigger { border: 1px solid #bbbbbb; }
+
+.asColorPicker-saturation {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.asColorPicker-saturation i {
+    border: 2px
+            solid #fff;
+    border-radius: 100%;
+    height: 5px;
+    margin-left: -2px;
+    margin-top: -2px;
+    width: 5px;
+}
+
+.asColorPicker-hue,
+.asColorPicker-alpha {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    margin-left: 10px;
+}
+
+.asColorPicker-hue i,
+.asColorPicker-alpha i {
+    border: 2px solid #fff;
+    height: 2px;
+    left: -2px;
+    margin-top: -2px;
+    width: 20px;
+}
+
+.asColorPicker-preview {
+    height: 33px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.asColorPicker-preview:after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.asColorPicker-preview li {
+    height: 33px;
+    width: 48px;
+}
+
+.asColorPicker-hex {
+    border-color: rgba(0, 0, 0, 0.05);
+    width: 100px;
+}
+
+.asColorPicker-palettes li {
+    height: 15px;
+    margin-bottom: 3px;
+    margin-right: 6px;
+    width: 21px;
+}
+
+.asColorPicker-palettes li span {
+    -webkit-box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.asColorPicker-palettes li:nth-child(5n) { margin-right: 0; }
+
+[data-mode="palettes"] .asColorPicker-palettes li:nth-child(5n) { margin-right: 6px; }
+
+.asColorPicker-buttons,
+.asColorPicker-gradient-control { float: right; }
+
+.asColorPicker-buttons a,
+.asColorPicker-gradient-control a { margin-left: 5px; }
+
+.asColorPicker-gradient {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.asColorPicker-gradient-preview {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    width: 160px;
+}
+
+.asColorPicker-gradient-preview:after {
+    background-image: url('../images/transparent.png');
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.asColorPicker-gradient-markers {
+    display: block;
+    height: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: -16px;
+    width: 160px;
+}
+
+.asColorPicker-gradient-marker {
+    background: #fff;
+    border: 1px solid #bbbbbb;
+    height: 10px;
+    margin-left: -6px;
+    width: 10px;
+}
+
+.asColorPicker-gradient-marker span {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.asColorPicker-gradient-marker i {
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background: #fff;
+    border: 1px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+    border-right-color: rgba(0, 0, 0, 0.05);
+    bottom: -3px;
+    height: 4px;
+    left: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 4px;
+}
+
+.asColorPicker-gradient-marker_active {
+    border: 2px solid #41a9e5;
+    z-index: 1;
+}
+
+.asColorPicker-gradient-marker_active i {
+    border: 2px solid transparent;
+    border-bottom-color: #41a9e5;
+    border-right-color: #41a9e5;
+    left: 1px;
+}
+
+.asColorPicker-gradient-wheel { margin-left: 10px; }
+
+.asColorPicker-gradient-wheel i { background-color: #888888; }
+
+.asColorPicker-gradient-angle {
+    margin-left: 10px;
+    width: 24px;
+}

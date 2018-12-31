@@ -1,0 +1,218 @@
+.dtp {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    user-select: none;
+    z-index: 2000;
+}
+
+.dtp > .dtp-content {
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    left: 50%;
+    max-height: 520px;
+    max-width: 300px;
+    position: relative;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+    background: #1f99a9;
+    color: #fff;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.dtp div.dtp-date, .dtp div.dtp-time {
+    background: #26c6da;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.dtp div.dtp-date > div {
+    margin: 0;
+    padding: 0;
+}
+
+.dtp div.dtp-actual-month {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.dtp div.dtp-actual-num {
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 0.9;
+}
+
+.dtp div.dtp-actual-maxtime {
+    font-size: 3em;
+    line-height: 0.9;
+}
+
+.dtp div.dtp-actual-year {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.dtp div.dtp-picker {
+    padding: 1em;
+    text-align: center;
+}
+
+.dtp div.dtp-picker-month, .dtp div.dtp-actual-time {
+    font-weight: 500;
+    text-align: center;
+}
+
+.dtp div.dtp-picker-month {
+    padding-bottom: 20px !important;
+    text-transform: uppercase !important;
+}
+
+.dtp .dtp-close {
+    position: absolute;
+    right: 1em;
+    top: 0.2em;
+}
+
+.dtp .dtp-close > a { color: #fff; }
+
+.dtp .dtp-close > a > i { font-size: 10px; }
+
+.dtp table.dtp-picker-days {
+    margin: 0;
+    min-height: 251px;
+}
+
+.dtp table.dtp-picker-days, .dtp table.dtp-picker-days tr, .dtp table.dtp-picker-days tr > td { border: none; }
+
+.dtp table.dtp-picker-days tr > td {
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 0.5em 0.3em;
+    text-align: center;
+}
+
+.dtp table.dtp-picker-days tr > td > span.dtp-select-day {
+    color: #BDBDBD !important;
+    padding: 0.4em 0.5em 0.5em 0.6em;
+}
+
+.dtp table.dtp-picker-days tr > td > a, .dtp .dtp-picker-time > a {
+    border-radius: 50% !important;
+    color: #212121;
+    padding: 7px 9px;
+    text-decoration: none;
+}
+
+.dtp table.dtp-picker-days tr > td > a.selected {
+    background: #26c6da;
+    color: #fff;
+}
+
+.dtp table.dtp-picker-days tr > th {
+    color: #757575;
+    font-weight: 700;
+    padding: 0.4em 0.3em;
+    text-align: center;
+}
+
+.dtp .p10 > a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.dtp .p10 > a:hover { color: #fff; }
+
+.dtp .p10 {
+    display: inline-block;
+    width: 10%;
+}
+
+.dtp .p20 {
+    display: inline-block;
+    width: 20%;
+}
+
+.dtp .p60 {
+    display: inline-block;
+    width: 60%;
+}
+
+.dtp .p80 {
+    display: inline-block;
+    width: 80%;
+}
+
+.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm {
+    background: #eee;
+    border-radius: 50% !important;
+    color: #212121;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em 0.5em;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+}
+
+.dtp .dtp-actual-meridien a.selected {
+    background: #26c6da;
+    color: #fff;
+}
+
+.dtp .dtp-picker-time > .dtp-select-hour { cursor: pointer; }
+
+.dtp .dtp-picker-time > .dtp-select-minute { cursor: pointer; }
+
+.dtp .dtp-buttons {
+    padding: 0 1em 1em 1em;
+    text-align: right;
+}
+
+.dtp.hidden, .dtp .hidden { display: none; }
+
+.dtp .invisible { visibility: hidden; }
+
+.dtp .left { float: left; }
+
+.dtp .right { float: right; }
+
+.dtp .clearfix { clear: both; }
+
+.dtp .center { text-align: center; }
+
+.dtp-picker-year { margin-bottom: 1px; }
+
+.year-picker-item {
+    cursor: pointer;
+    font-size: large;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.dtp-actual-year:hover { cursor: pointer; }
+
+.dtp-actual-year.disabled:hover { cursor: inherit; }
+
+.year-picker-item:hover { color: #26c6da; }
+
+.year-picker-item.active {
+    color: #26c6da;
+    font-weight: bold;
+}
+
+.dtp-select-year-range {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}

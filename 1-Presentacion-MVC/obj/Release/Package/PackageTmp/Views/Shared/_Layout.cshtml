@@ -1,0 +1,383 @@
+﻿@using MvcSiteMapProvider.Web.Html
+
+<html lang="es-co">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Proyecto de pruebas">
+    <meta name="author" content="Breitner Enrique Gonzalez">
+
+    <title>Pruebas - @ViewBag.Title</title>
+
+    @Styles.Render("~/Estilos/css")
+
+    <style>
+        .cortar {
+            border: 1px solid blue;
+            height: 20px;
+            overflow: hidden;
+            padding: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body class="fix-header card-no-border">
+
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+
+<div id="main-wrapper">
+
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+
+                    <b>
+                        <img src="@Url.Content("~/assets-backend/images/logo-icon.png")" alt="homepage" class="dark-logo"/>
+
+                        <img src="@Url.Content("~/assets-backend/images/logo-light-icon.png")" alt="homepage" class="light-logo"/>
+                    </b>
+
+                    <span>
+
+                        <img src="@Url.Content("~/assets-backend/images/logo-text.png")" alt="homepage" class="dark-logo"/>
+
+                        <img src="@Url.Content("~/assets-backend/images/logo-light-text.png")" class="light-logo" alt="homepage"/>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-collapse">
+
+                <ul class="navbar-nav mr-auto mt-md-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)">
+                            <i class="mdi mdi-menu"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)">
+                            <i class="ti-menu"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-nav my-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-item text-muted waves-effect " href="@Url.Action("Register", "Account")">
+                            Register
+                        </a>
+                    </li>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item text-muted waves-effect ">
+                                @{
+                                    @:Hello, @User.Identity.Name
+                                }
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item waves-effect waves-dark" href="@Url.Action("LogOff", "Account")">
+                                <i class="fa fa-power-off"></i> Logout
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item waves-effect waves-dark" href="@Url.Action("Login", "Account")">
+                                Log in
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="left-sidebar">
+
+        <div>
+
+            @if (Request.IsAuthenticated)
+            {
+                <div class="user-profile" style="background: url(@Url.Content("~/assets-backend/images/background/user-info.jpg")) no-repeat;">
+                    <div class="profile-img">
+                        <img src="@Url.Content("~/assets-backend/images/users/profile.png")" alt="user">
+                    </div>
+                </div>
+            }
+
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">Dashboard</li>
+                    <li>
+                        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                            <i class="mdi mdi-email"></i>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li>
+                                <a href="@Url.Action("Index", "DimEmployees")">List of Employees</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "DimEmployees")">Add DimEmployee</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                            <i class="mdi mdi-email"></i>
+                            <span class="hide-menu">Countries</span>
+                        </a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li>
+                                <a href="@Url.Action("Index", "Countries")">List of Countries</a>
+                            </li>
+                            <li>
+                                Add
+                                @* <a href="@Url.Action("Create", "Countries")">Add Country</a>*@
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-devider"></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="link" data-toggle="tooltip" title="Ajustes">
+                <i class="ti-settings"></i>
+            </a>
+
+            <a href="#" class="link" data-toggle="tooltip" title="Intranet">
+                <i class="mdi mdi-gmail"></i>
+            </a>
+
+            @if (Request.IsAuthenticated)
+            {
+                <a href="@Url.Action("LogOff", "Account")" class="link" data-toggle="tooltip" title="Salir">
+                    <i class="mdi mdi-power"></i>
+                </a>
+            }
+
+        </div>
+
+    </aside>
+
+    <div class="page-wrapper" style="min-height: 849px;">
+        <div class="container-fluid">
+            <div class="row page-titles">
+                <div class="col-md-5 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                    <ol class="breadcrumb">
+                        @Html.MvcSiteMap().SiteMapPath()
+                    </ol>
+                </div>
+                <div class="col-md-7 col-4 align-self-center">
+                    <div class="d-flex m-t-10 justify-content-end">
+                        <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                            <div class="chart-text m-r-10">
+                                <h6 class="m-b-0">
+                                    <small>Hoy es:</small>
+                                </h6>
+                                <h4 class="m-t-0 text-info">@DateTime.Now.ToString("MMMM dd, yyyy")</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            @RenderBody()
+
+        </div>
+
+        <footer class="footer">
+            © @DateTime.Now.Year Breitner Enrique Gonzalez
+        </footer>
+
+    </div>
+
+</div>
+
+
+@Scripts.Render("~/scripts-1/js")
+
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+@Scripts.Render("~/scripts-2/js")
+
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+        $(document).ready(function() {
+            var table = $('#example').DataTable({
+                "columnDefs": [
+                    {
+                        "visible": false,
+                        "targets": 2
+                    }
+                ],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2,
+                        {
+                            page: 'current'
+                        }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+
+            $('#example tbody').on('click',
+                'tr.group',
+                function() {
+                    var currentOrder = table.order()[0];
+                    if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                        table.order([2, 'desc']).draw();
+                    } else {
+                        table.order([2, 'asc']).draw();
+                    }
+                });
+        });
+
+
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear',
+            function(event, element) {
+                return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+            });
+
+        drEvent.on('dropify.afterClear',
+            function(event, element) {
+                alert('File deleted');
+            });
+
+        drEvent.on('dropify.errors',
+            function(event, element) {
+                console.log('Has Errors');
+            });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify');
+        $('#toggleDropify').on('click',
+            function(e) {
+                e.preventDefault();
+                if (drDestroy.isDropified()) {
+                    drDestroy.destroy();
+                } else {
+                    drDestroy.init();
+                }
+            });
+
+
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+
+
+    // Daterange picker
+    //$('.input-daterange-datepicker').daterangepicker({
+    //    format: 'DD/MM/YYYY',
+    //    buttonClasses: ['btn', 'btn-sm'],
+    //    applyClass: 'btn-danger',
+    //    cancelClass: 'btn-inverse'
+    //});
+
+    //$('.input-daterange-timepicker').daterangepicker({
+    //    timePicker: true,
+    //    format: 'DD/MM/YYYY h:mm A',
+    //    timePickerIncrement: 30,
+    //    timePicker12Hour: true,
+    //    timePickerSeconds: false,
+    //    buttonClasses: ['btn', 'btn-sm'],
+    //    applyClass: 'btn-danger',
+    //    cancelClass: 'btn-inverse'
+    //});
+    //$('.input-limit-datepicker').daterangepicker({
+    //    format: 'DD/MM/YYYY',
+    //    minDate: '06/01/2015',
+    //    maxDate: '06/30/2015',
+    //    buttonClasses: ['btn', 'btn-sm'],
+    //    applyClass: 'btn-danger',
+    //    cancelClass: 'btn-inverse',
+    //    dateLimit: {
+    //        days: 6
+    //    }
+    //});
+
+
+</script>
+
+<script src="~/assets-backend/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+</body>
+</html>

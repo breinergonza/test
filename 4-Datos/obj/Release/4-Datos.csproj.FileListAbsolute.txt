@@ -1,0 +1,17 @@
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\4-Datos.dll.config
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\4-Datos.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\4-Datos.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\AutoMapper.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\AutoMapper.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\EntityFramework.SqlServer.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\EntityFramework.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\System.ValueTuple.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\5-InterfazComun.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\5-InterfazComun.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\obj\Release\4-Datos.csprojAssemblyReference.cache
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\obj\Release\4-Datos.csproj.CoreCompileInputs.cache
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\obj\Release\4-Datos.csproj.CopyComplete
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\obj\Release\4-Datos.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\obj\Release\4-Datos.pdb
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\Newtonsoft.Json.dll
+D:\Breitner\TestStefan\Aplicativo-Pruebas-Azure\4-Datos\bin\Release\Newtonsoft.Json.pdb

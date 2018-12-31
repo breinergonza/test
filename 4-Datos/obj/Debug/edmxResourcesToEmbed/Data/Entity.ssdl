@@ -1,0 +1,1130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DimAccount">
+    <Key>
+      <PropertyRef Name="AccountKey" />
+    </Key>
+    <Property Name="AccountKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentAccountKey" Type="int" />
+    <Property Name="AccountLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomMembers" Type="nvarchar" MaxLength="300" />
+    <Property Name="ValueType" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomMemberOptions" Type="nvarchar" MaxLength="200" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimChannel">
+    <Key>
+      <PropertyRef Name="ChannelKey" />
+    </Key>
+    <Property Name="ChannelKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelLabel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ChannelName" Type="nvarchar" MaxLength="20" />
+    <Property Name="ChannelDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimCurrency">
+    <Key>
+      <PropertyRef Name="CurrencyKey" />
+    </Key>
+    <Property Name="CurrencyKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyLabel" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CurrencyName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CurrencyDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimCustomer">
+    <Key>
+      <PropertyRef Name="CustomerKey" />
+    </Key>
+    <Property Name="CustomerKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeographyKey" Type="int" Nullable="false" />
+    <Property Name="CustomerLabel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="8" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameStyle" Type="bit" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="MaritalStatus" Type="nchar" MaxLength="1" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="1" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearlyIncome" Type="money" />
+    <Property Name="TotalChildren" Type="tinyint" />
+    <Property Name="NumberChildrenAtHome" Type="tinyint" />
+    <Property Name="Education" Type="nvarchar" MaxLength="40" />
+    <Property Name="Occupation" Type="nvarchar" MaxLength="100" />
+    <Property Name="HouseOwnerFlag" Type="nchar" MaxLength="1" />
+    <Property Name="NumberCarsOwned" Type="tinyint" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="120" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="120" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="DateFirstPurchase" Type="date" />
+    <Property Name="CustomerType" Type="nvarchar" MaxLength="15" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimDate">
+    <Key>
+      <PropertyRef Name="Datekey" />
+    </Key>
+    <Property Name="Datekey" Type="datetime" Nullable="false" />
+    <Property Name="FullDateLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DateDescription" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CalendarYear" Type="int" Nullable="false" />
+    <Property Name="CalendarYearLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CalendarHalfYear" Type="int" Nullable="false" />
+    <Property Name="CalendarHalfYearLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CalendarQuarter" Type="int" Nullable="false" />
+    <Property Name="CalendarQuarterLabel" Type="nvarchar" MaxLength="20" />
+    <Property Name="CalendarMonth" Type="int" Nullable="false" />
+    <Property Name="CalendarMonthLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CalendarWeek" Type="int" Nullable="false" />
+    <Property Name="CalendarWeekLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CalendarDayOfWeek" Type="int" Nullable="false" />
+    <Property Name="CalendarDayOfWeekLabel" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="FiscalYear" Type="int" Nullable="false" />
+    <Property Name="FiscalYearLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FiscalHalfYear" Type="int" Nullable="false" />
+    <Property Name="FiscalHalfYearLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FiscalQuarter" Type="int" Nullable="false" />
+    <Property Name="FiscalQuarterLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FiscalMonth" Type="int" Nullable="false" />
+    <Property Name="FiscalMonthLabel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsWorkDay" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsHoliday" Type="int" Nullable="false" />
+    <Property Name="HolidayName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EuropeSeason" Type="nvarchar" MaxLength="50" />
+    <Property Name="NorthAmericaSeason" Type="nvarchar" MaxLength="50" />
+    <Property Name="AsiaSeason" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DimEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeKey" />
+    </Key>
+    <Property Name="EmployeeKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentEmployeeKey" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="HireDate" Type="date" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="25" />
+    <Property Name="MaritalStatus" Type="nchar" MaxLength="1" />
+    <Property Name="EmergencyContactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyContactPhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="SalariedFlag" Type="bit" />
+    <Property Name="Gender" Type="nchar" MaxLength="1" />
+    <Property Name="PayFrequency" Type="tinyint" />
+    <Property Name="BaseRate" Type="money" />
+    <Property Name="VacationHours" Type="smallint" />
+    <Property Name="CurrentFlag" Type="bit" Nullable="false" />
+    <Property Name="SalesPersonFlag" Type="bit" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProfileUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimEntity">
+    <Key>
+      <PropertyRef Name="EntityKey" />
+    </Key>
+    <Property Name="EntityKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntityLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentEntityKey" Type="int" />
+    <Property Name="ParentEntityLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="EntityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EntityDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="EntityType" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimGeography">
+    <Key>
+      <PropertyRef Name="GeographyKey" />
+    </Key>
+    <Property Name="GeographyKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeographyTypeKey" Type="int" Nullable="false" />
+    <Property Name="GeographyType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContinentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="100" />
+    <Property Name="StateProvinceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegionCountryName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Geometry" Type="geometry" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimMachine">
+    <Key>
+      <PropertyRef Name="MachineKey" />
+    </Key>
+    <Property Name="MachineKey" Type="int" Nullable="false" />
+    <Property Name="MachineLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="MachineType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MachineDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="VendorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MachineOS" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MachineSource" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MachineHardware" Type="nvarchar" MaxLength="100" />
+    <Property Name="MachineSoftware" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServiceStartDate" Type="datetime" Nullable="false" />
+    <Property Name="DecommissionDate" Type="datetime" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimOutage">
+    <Key>
+      <PropertyRef Name="OutageKey" />
+    </Key>
+    <Property Name="OutageKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutageLabel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="OutageName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutageDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="OutageType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutageTypeDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="OutageSubType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutageSubTypeDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimProduct">
+    <Key>
+      <PropertyRef Name="ProductKey" />
+    </Key>
+    <Property Name="ProductKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductLabel" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProductDescription" Type="nvarchar" MaxLength="400" />
+    <Property Name="ProductSubcategoryKey" Type="int" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClassID" Type="nvarchar" MaxLength="10" />
+    <Property Name="ClassName" Type="nvarchar" MaxLength="20" />
+    <Property Name="StyleID" Type="nvarchar" MaxLength="10" />
+    <Property Name="StyleName" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColorID" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="SizeRange" Type="nvarchar" MaxLength="50" />
+    <Property Name="SizeUnitMeasureID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="WeightUnitMeasureID" Type="nvarchar" MaxLength="20" />
+    <Property Name="UnitOfMeasureID" Type="nvarchar" MaxLength="10" />
+    <Property Name="UnitOfMeasureName" Type="nvarchar" MaxLength="40" />
+    <Property Name="StockTypeID" Type="nvarchar" MaxLength="10" />
+    <Property Name="StockTypeName" Type="nvarchar" MaxLength="40" />
+    <Property Name="UnitCost" Type="money" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="AvailableForSaleDate" Type="datetime" />
+    <Property Name="StopSaleDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="7" />
+    <Property Name="ImageURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="ProductURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryKey" />
+    </Key>
+    <Property Name="ProductCategoryKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCategoryLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductCategoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ProductCategoryDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimProductSubcategory">
+    <Key>
+      <PropertyRef Name="ProductSubcategoryKey" />
+    </Key>
+    <Property Name="ProductSubcategoryKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductSubcategoryLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductSubcategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductSubcategoryDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductCategoryKey" Type="int" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimPromotion">
+    <Key>
+      <PropertyRef Name="PromotionKey" />
+    </Key>
+    <Property Name="PromotionKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PromotionLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="PromotionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PromotionDescription" Type="nvarchar" MaxLength="255" />
+    <Property Name="DiscountPercent" Type="float" />
+    <Property Name="PromotionType" Type="nvarchar" MaxLength="50" />
+    <Property Name="PromotionCategory" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="MinQuantity" Type="int" />
+    <Property Name="MaxQuantity" Type="int" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimSalesTerritory">
+    <Key>
+      <PropertyRef Name="SalesTerritoryKey" />
+    </Key>
+    <Property Name="SalesTerritoryKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeographyKey" Type="int" Nullable="false" />
+    <Property Name="SalesTerritoryLabel" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalesTerritoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesTerritoryRegion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesTerritoryCountry" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesTerritoryGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalesTerritoryLevel" Type="nvarchar" MaxLength="10" />
+    <Property Name="SalesTerritoryManager" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimScenario">
+    <Key>
+      <PropertyRef Name="ScenarioKey" />
+    </Key>
+    <Property Name="ScenarioKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScenarioLabel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="20" />
+    <Property Name="ScenarioDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DimStore">
+    <Key>
+      <PropertyRef Name="StoreKey" />
+    </Key>
+    <Property Name="StoreKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeographyKey" Type="int" Nullable="false" />
+    <Property Name="StoreManager" Type="int" />
+    <Property Name="StoreType" Type="nvarchar" MaxLength="15" />
+    <Property Name="StoreName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="StoreDescription" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OpenDate" Type="datetime" Nullable="false" />
+    <Property Name="CloseDate" Type="datetime" />
+    <Property Name="EntityKey" Type="int" />
+    <Property Name="ZipCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="ZipCodeExtension" Type="nvarchar" MaxLength="10" />
+    <Property Name="StorePhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="StoreFax" Type="nvarchar" MaxLength="14" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="100" />
+    <Property Name="CloseReason" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmployeeCount" Type="int" />
+    <Property Name="SellingAreaSize" Type="float" />
+    <Property Name="LastRemodelDate" Type="datetime" />
+    <Property Name="GeoLocation" Type="geography" />
+    <Property Name="Geometry" Type="geometry" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactExchangeRate">
+    <Key>
+      <PropertyRef Name="ExchangeRateKey" />
+    </Key>
+    <Property Name="ExchangeRateKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="AverageRate" Type="float" Nullable="false" />
+    <Property Name="EndOfDayRate" Type="float" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactInventory">
+    <Key>
+      <PropertyRef Name="InventoryKey" />
+    </Key>
+    <Property Name="InventoryKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="ProductKey" Type="int" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="OnHandQuantity" Type="int" Nullable="false" />
+    <Property Name="OnOrderQuantity" Type="int" Nullable="false" />
+    <Property Name="SafetyStockQuantity" Type="int" />
+    <Property Name="UnitCost" Type="money" Nullable="false" />
+    <Property Name="DaysInStock" Type="int" />
+    <Property Name="MinDayInStock" Type="int" />
+    <Property Name="MaxDayInStock" Type="int" />
+    <Property Name="Aging" Type="int" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactITMachine">
+    <Key>
+      <PropertyRef Name="ITMachinekey" />
+    </Key>
+    <Property Name="ITMachinekey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MachineKey" Type="int" Nullable="false" />
+    <Property Name="Datekey" Type="datetime" Nullable="false" />
+    <Property Name="CostAmount" Type="money" />
+    <Property Name="CostType" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactITSLA">
+    <Key>
+      <PropertyRef Name="ITSLAkey" />
+    </Key>
+    <Property Name="ITSLAkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="MachineKey" Type="int" Nullable="false" />
+    <Property Name="OutageKey" Type="int" Nullable="false" />
+    <Property Name="OutageStartTime" Type="datetime" Nullable="false" />
+    <Property Name="OutageEndTime" Type="datetime" Nullable="false" />
+    <Property Name="DownTime" Type="int" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactOnlineSales">
+    <Key>
+      <PropertyRef Name="OnlineSalesKey" />
+    </Key>
+    <Property Name="OnlineSalesKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="ProductKey" Type="int" Nullable="false" />
+    <Property Name="PromotionKey" Type="int" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="CustomerKey" Type="int" Nullable="false" />
+    <Property Name="SalesOrderLineNumber" Type="int" />
+    <Property Name="SalesQuantity" Type="int" Nullable="false" />
+    <Property Name="SalesAmount" Type="money" Nullable="false" />
+    <Property Name="ReturnQuantity" Type="int" Nullable="false" />
+    <Property Name="ReturnAmount" Type="money" />
+    <Property Name="DiscountQuantity" Type="int" />
+    <Property Name="DiscountAmount" Type="money" />
+    <Property Name="TotalCost" Type="money" Nullable="false" />
+    <Property Name="UnitCost" Type="money" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="SalesOrderNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FactSales">
+    <Key>
+      <PropertyRef Name="SalesKey" />
+    </Key>
+    <Property Name="SalesKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="channelKey" Type="int" Nullable="false" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="ProductKey" Type="int" Nullable="false" />
+    <Property Name="PromotionKey" Type="int" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="UnitCost" Type="money" Nullable="false" />
+    <Property Name="UnitPrice" Type="money" Nullable="false" />
+    <Property Name="SalesQuantity" Type="int" Nullable="false" />
+    <Property Name="ReturnQuantity" Type="int" Nullable="false" />
+    <Property Name="ReturnAmount" Type="money" />
+    <Property Name="DiscountQuantity" Type="int" />
+    <Property Name="DiscountAmount" Type="money" />
+    <Property Name="TotalCost" Type="money" Nullable="false" />
+    <Property Name="SalesAmount" Type="money" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactSalesQuota">
+    <Key>
+      <PropertyRef Name="SalesQuotaKey" />
+    </Key>
+    <Property Name="SalesQuotaKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelKey" Type="int" Nullable="false" />
+    <Property Name="StoreKey" Type="int" Nullable="false" />
+    <Property Name="ProductKey" Type="int" Nullable="false" />
+    <Property Name="DateKey" Type="datetime" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="ScenarioKey" Type="int" Nullable="false" />
+    <Property Name="SalesQuantityQuota" Type="int" Nullable="false" />
+    <Property Name="SalesAmountQuota" Type="money" Nullable="false" />
+    <Property Name="GrossMarginQuota" Type="money" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FactStrategyPlan">
+    <Key>
+      <PropertyRef Name="StrategyPlanKey" />
+    </Key>
+    <Property Name="StrategyPlanKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Datekey" Type="datetime" Nullable="false" />
+    <Property Name="EntityKey" Type="int" Nullable="false" />
+    <Property Name="ScenarioKey" Type="int" Nullable="false" />
+    <Property Name="AccountKey" Type="int" Nullable="false" />
+    <Property Name="CurrencyKey" Type="int" Nullable="false" />
+    <Property Name="ProductCategoryKey" Type="int" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="ETLLoadID" Type="int" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_DimCustomer_DimGeography">
+    <End Role="DimGeography" Type="Self.DimGeography" Multiplicity="1" />
+    <End Role="DimCustomer" Type="Self.DimCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimGeography">
+        <PropertyRef Name="GeographyKey" />
+      </Principal>
+      <Dependent Role="DimCustomer">
+        <PropertyRef Name="GeographyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimEmployee_DimEmployee">
+    <End Role="DimEmployee" Type="Self.DimEmployee" Multiplicity="0..1" />
+    <End Role="DimEmployee1" Type="Self.DimEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimEmployee">
+        <PropertyRef Name="EmployeeKey" />
+      </Principal>
+      <Dependent Role="DimEmployee1">
+        <PropertyRef Name="ParentEmployeeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimMachine_DimStore">
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="1" />
+    <End Role="DimMachine" Type="Self.DimMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimStore">
+        <PropertyRef Name="StoreKey" />
+      </Principal>
+      <Dependent Role="DimMachine">
+        <PropertyRef Name="StoreKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimProduct_DimProductSubcategory">
+    <End Role="DimProductSubcategory" Type="Self.DimProductSubcategory" Multiplicity="0..1" />
+    <End Role="DimProduct" Type="Self.DimProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProductSubcategory">
+        <PropertyRef Name="ProductSubcategoryKey" />
+      </Principal>
+      <Dependent Role="DimProduct">
+        <PropertyRef Name="ProductSubcategoryKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimProductSubcategory_DimProductCategory">
+    <End Role="DimProductCategory" Type="Self.DimProductCategory" Multiplicity="0..1" />
+    <End Role="DimProductSubcategory" Type="Self.DimProductSubcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProductCategory">
+        <PropertyRef Name="ProductCategoryKey" />
+      </Principal>
+      <Dependent Role="DimProductSubcategory">
+        <PropertyRef Name="ProductCategoryKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimSalesTerritory_DimGeography">
+    <End Role="DimGeography" Type="Self.DimGeography" Multiplicity="1" />
+    <End Role="DimSalesTerritory" Type="Self.DimSalesTerritory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimGeography">
+        <PropertyRef Name="GeographyKey" />
+      </Principal>
+      <Dependent Role="DimSalesTerritory">
+        <PropertyRef Name="GeographyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DimStore_DimGeography">
+    <End Role="DimGeography" Type="Self.DimGeography" Multiplicity="1" />
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimGeography">
+        <PropertyRef Name="GeographyKey" />
+      </Principal>
+      <Dependent Role="DimStore">
+        <PropertyRef Name="GeographyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactExchangeRate_DimCurrency">
+    <End Role="DimCurrency" Type="Self.DimCurrency" Multiplicity="1" />
+    <End Role="FactExchangeRate" Type="Self.FactExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCurrency">
+        <PropertyRef Name="CurrencyKey" />
+      </Principal>
+      <Dependent Role="FactExchangeRate">
+        <PropertyRef Name="CurrencyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactExchangeRate_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactExchangeRate" Type="Self.FactExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactExchangeRate">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactInventory_DimCurrency">
+    <End Role="DimCurrency" Type="Self.DimCurrency" Multiplicity="1" />
+    <End Role="FactInventory" Type="Self.FactInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCurrency">
+        <PropertyRef Name="CurrencyKey" />
+      </Principal>
+      <Dependent Role="FactInventory">
+        <PropertyRef Name="CurrencyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactInventory_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactInventory" Type="Self.FactInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactInventory">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactInventory_DimProduct">
+    <End Role="DimProduct" Type="Self.DimProduct" Multiplicity="1" />
+    <End Role="FactInventory" Type="Self.FactInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProduct">
+        <PropertyRef Name="ProductKey" />
+      </Principal>
+      <Dependent Role="FactInventory">
+        <PropertyRef Name="ProductKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactInventory_DimStore">
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="1" />
+    <End Role="FactInventory" Type="Self.FactInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimStore">
+        <PropertyRef Name="StoreKey" />
+      </Principal>
+      <Dependent Role="FactInventory">
+        <PropertyRef Name="StoreKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITMachine_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactITMachine" Type="Self.FactITMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactITMachine">
+        <PropertyRef Name="Datekey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITMachine_DimMachine">
+    <End Role="DimMachine" Type="Self.DimMachine" Multiplicity="1" />
+    <End Role="FactITMachine" Type="Self.FactITMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimMachine">
+        <PropertyRef Name="MachineKey" />
+      </Principal>
+      <Dependent Role="FactITMachine">
+        <PropertyRef Name="MachineKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITSLA_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactITSLA" Type="Self.FactITSLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactITSLA">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITSLA_DimMachine">
+    <End Role="DimMachine" Type="Self.DimMachine" Multiplicity="1" />
+    <End Role="FactITSLA" Type="Self.FactITSLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimMachine">
+        <PropertyRef Name="MachineKey" />
+      </Principal>
+      <Dependent Role="FactITSLA">
+        <PropertyRef Name="MachineKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITSLA_DimOutage">
+    <End Role="DimOutage" Type="Self.DimOutage" Multiplicity="1" />
+    <End Role="FactITSLA" Type="Self.FactITSLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimOutage">
+        <PropertyRef Name="OutageKey" />
+      </Principal>
+      <Dependent Role="FactITSLA">
+        <PropertyRef Name="OutageKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactITSLA_DimStore">
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="1" />
+    <End Role="FactITSLA" Type="Self.FactITSLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimStore">
+        <PropertyRef Name="StoreKey" />
+      </Principal>
+      <Dependent Role="FactITSLA">
+        <PropertyRef Name="StoreKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimChannel">
+    <End Role="DimChannel" Type="Self.DimChannel" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimChannel">
+        <PropertyRef Name="ChannelKey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="channelKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimCurrency">
+    <End Role="DimCurrency" Type="Self.DimCurrency" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCurrency">
+        <PropertyRef Name="CurrencyKey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="CurrencyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimProduct">
+    <End Role="DimProduct" Type="Self.DimProduct" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProduct">
+        <PropertyRef Name="ProductKey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="ProductKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimPromotion">
+    <End Role="DimPromotion" Type="Self.DimPromotion" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimPromotion">
+        <PropertyRef Name="PromotionKey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="PromotionKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSales_DimStore">
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="1" />
+    <End Role="FactSales" Type="Self.FactSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimStore">
+        <PropertyRef Name="StoreKey" />
+      </Principal>
+      <Dependent Role="FactSales">
+        <PropertyRef Name="StoreKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimChannel">
+    <End Role="DimChannel" Type="Self.DimChannel" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimChannel">
+        <PropertyRef Name="ChannelKey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="ChannelKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimCurrency">
+    <End Role="DimCurrency" Type="Self.DimCurrency" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCurrency">
+        <PropertyRef Name="CurrencyKey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="CurrencyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimProduct">
+    <End Role="DimProduct" Type="Self.DimProduct" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProduct">
+        <PropertyRef Name="ProductKey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="ProductKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimScenario">
+    <End Role="DimScenario" Type="Self.DimScenario" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimScenario">
+        <PropertyRef Name="ScenarioKey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="ScenarioKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSalesQuota_DimStore">
+    <End Role="DimStore" Type="Self.DimStore" Multiplicity="1" />
+    <End Role="FactSalesQuota" Type="Self.FactSalesQuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimStore">
+        <PropertyRef Name="StoreKey" />
+      </Principal>
+      <Dependent Role="FactSalesQuota">
+        <PropertyRef Name="StoreKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimAccount">
+    <End Role="DimAccount" Type="Self.DimAccount" Multiplicity="1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimAccount">
+        <PropertyRef Name="AccountKey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="AccountKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimCurrency">
+    <End Role="DimCurrency" Type="Self.DimCurrency" Multiplicity="1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCurrency">
+        <PropertyRef Name="CurrencyKey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="CurrencyKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimDate">
+    <End Role="DimDate" Type="Self.DimDate" Multiplicity="1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Datekey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="Datekey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimEntity">
+    <End Role="DimEntity" Type="Self.DimEntity" Multiplicity="1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimEntity">
+        <PropertyRef Name="EntityKey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="EntityKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimProductCategory">
+    <End Role="DimProductCategory" Type="Self.DimProductCategory" Multiplicity="0..1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProductCategory">
+        <PropertyRef Name="ProductCategoryKey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="ProductCategoryKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactStrategyPlan_DimScenario">
+    <End Role="DimScenario" Type="Self.DimScenario" Multiplicity="1" />
+    <End Role="FactStrategyPlan" Type="Self.FactStrategyPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimScenario">
+        <PropertyRef Name="ScenarioKey" />
+      </Principal>
+      <Dependent Role="FactStrategyPlan">
+        <PropertyRef Name="ScenarioKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModeloDBStoreContainer">
+    <EntitySet Name="DimAccount" EntityType="Self.DimAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimChannel" EntityType="Self.DimChannel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimCurrency" EntityType="Self.DimCurrency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimCustomer" EntityType="Self.DimCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimDate" EntityType="Self.DimDate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimEmployee" EntityType="Self.DimEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimEntity" EntityType="Self.DimEntity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimGeography" EntityType="Self.DimGeography" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimMachine" EntityType="Self.DimMachine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimOutage" EntityType="Self.DimOutage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimProduct" EntityType="Self.DimProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimProductCategory" EntityType="Self.DimProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimProductSubcategory" EntityType="Self.DimProductSubcategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimPromotion" EntityType="Self.DimPromotion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimSalesTerritory" EntityType="Self.DimSalesTerritory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimScenario" EntityType="Self.DimScenario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimStore" EntityType="Self.DimStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactExchangeRate" EntityType="Self.FactExchangeRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactInventory" EntityType="Self.FactInventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactITMachine" EntityType="Self.FactITMachine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactITSLA" EntityType="Self.FactITSLA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactOnlineSales" EntityType="Self.FactOnlineSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactSales" EntityType="Self.FactSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactSalesQuota" EntityType="Self.FactSalesQuota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactStrategyPlan" EntityType="Self.FactStrategyPlan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DimCustomer_DimGeography" Association="Self.FK_DimCustomer_DimGeography">
+      <End Role="DimGeography" EntitySet="DimGeography" />
+      <End Role="DimCustomer" EntitySet="DimCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimEmployee_DimEmployee" Association="Self.FK_DimEmployee_DimEmployee">
+      <End Role="DimEmployee" EntitySet="DimEmployee" />
+      <End Role="DimEmployee1" EntitySet="DimEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimMachine_DimStore" Association="Self.FK_DimMachine_DimStore">
+      <End Role="DimStore" EntitySet="DimStore" />
+      <End Role="DimMachine" EntitySet="DimMachine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimProduct_DimProductSubcategory" Association="Self.FK_DimProduct_DimProductSubcategory">
+      <End Role="DimProductSubcategory" EntitySet="DimProductSubcategory" />
+      <End Role="DimProduct" EntitySet="DimProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimProductSubcategory_DimProductCategory" Association="Self.FK_DimProductSubcategory_DimProductCategory">
+      <End Role="DimProductCategory" EntitySet="DimProductCategory" />
+      <End Role="DimProductSubcategory" EntitySet="DimProductSubcategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimSalesTerritory_DimGeography" Association="Self.FK_DimSalesTerritory_DimGeography">
+      <End Role="DimGeography" EntitySet="DimGeography" />
+      <End Role="DimSalesTerritory" EntitySet="DimSalesTerritory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DimStore_DimGeography" Association="Self.FK_DimStore_DimGeography">
+      <End Role="DimGeography" EntitySet="DimGeography" />
+      <End Role="DimStore" EntitySet="DimStore" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactExchangeRate_DimCurrency" Association="Self.FK_FactExchangeRate_DimCurrency">
+      <End Role="DimCurrency" EntitySet="DimCurrency" />
+      <End Role="FactExchangeRate" EntitySet="FactExchangeRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactExchangeRate_DimDate" Association="Self.FK_FactExchangeRate_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactExchangeRate" EntitySet="FactExchangeRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactInventory_DimCurrency" Association="Self.FK_FactInventory_DimCurrency">
+      <End Role="DimCurrency" EntitySet="DimCurrency" />
+      <End Role="FactInventory" EntitySet="FactInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactInventory_DimDate" Association="Self.FK_FactInventory_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactInventory" EntitySet="FactInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactInventory_DimProduct" Association="Self.FK_FactInventory_DimProduct">
+      <End Role="DimProduct" EntitySet="DimProduct" />
+      <End Role="FactInventory" EntitySet="FactInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactInventory_DimStore" Association="Self.FK_FactInventory_DimStore">
+      <End Role="DimStore" EntitySet="DimStore" />
+      <End Role="FactInventory" EntitySet="FactInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITMachine_DimDate" Association="Self.FK_FactITMachine_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactITMachine" EntitySet="FactITMachine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITMachine_DimMachine" Association="Self.FK_FactITMachine_DimMachine">
+      <End Role="DimMachine" EntitySet="DimMachine" />
+      <End Role="FactITMachine" EntitySet="FactITMachine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITSLA_DimDate" Association="Self.FK_FactITSLA_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactITSLA" EntitySet="FactITSLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITSLA_DimMachine" Association="Self.FK_FactITSLA_DimMachine">
+      <End Role="DimMachine" EntitySet="DimMachine" />
+      <End Role="FactITSLA" EntitySet="FactITSLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITSLA_DimOutage" Association="Self.FK_FactITSLA_DimOutage">
+      <End Role="DimOutage" EntitySet="DimOutage" />
+      <End Role="FactITSLA" EntitySet="FactITSLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactITSLA_DimStore" Association="Self.FK_FactITSLA_DimStore">
+      <End Role="DimStore" EntitySet="DimStore" />
+      <End Role="FactITSLA" EntitySet="FactITSLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimChannel" Association="Self.FK_FactSales_DimChannel">
+      <End Role="DimChannel" EntitySet="DimChannel" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimCurrency" Association="Self.FK_FactSales_DimCurrency">
+      <End Role="DimCurrency" EntitySet="DimCurrency" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimDate" Association="Self.FK_FactSales_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimProduct" Association="Self.FK_FactSales_DimProduct">
+      <End Role="DimProduct" EntitySet="DimProduct" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimPromotion" Association="Self.FK_FactSales_DimPromotion">
+      <End Role="DimPromotion" EntitySet="DimPromotion" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSales_DimStore" Association="Self.FK_FactSales_DimStore">
+      <End Role="DimStore" EntitySet="DimStore" />
+      <End Role="FactSales" EntitySet="FactSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimChannel" Association="Self.FK_FactSalesQuota_DimChannel">
+      <End Role="DimChannel" EntitySet="DimChannel" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimCurrency" Association="Self.FK_FactSalesQuota_DimCurrency">
+      <End Role="DimCurrency" EntitySet="DimCurrency" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimDate" Association="Self.FK_FactSalesQuota_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimProduct" Association="Self.FK_FactSalesQuota_DimProduct">
+      <End Role="DimProduct" EntitySet="DimProduct" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimScenario" Association="Self.FK_FactSalesQuota_DimScenario">
+      <End Role="DimScenario" EntitySet="DimScenario" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSalesQuota_DimStore" Association="Self.FK_FactSalesQuota_DimStore">
+      <End Role="DimStore" EntitySet="DimStore" />
+      <End Role="FactSalesQuota" EntitySet="FactSalesQuota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimAccount" Association="Self.FK_FactStrategyPlan_DimAccount">
+      <End Role="DimAccount" EntitySet="DimAccount" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimCurrency" Association="Self.FK_FactStrategyPlan_DimCurrency">
+      <End Role="DimCurrency" EntitySet="DimCurrency" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimDate" Association="Self.FK_FactStrategyPlan_DimDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimEntity" Association="Self.FK_FactStrategyPlan_DimEntity">
+      <End Role="DimEntity" EntitySet="DimEntity" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimProductCategory" Association="Self.FK_FactStrategyPlan_DimProductCategory">
+      <End Role="DimProductCategory" EntitySet="DimProductCategory" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactStrategyPlan_DimScenario" Association="Self.FK_FactStrategyPlan_DimScenario">
+      <End Role="DimScenario" EntitySet="DimScenario" />
+      <End Role="FactStrategyPlan" EntitySet="FactStrategyPlan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

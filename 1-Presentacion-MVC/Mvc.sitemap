@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+
+    <mvcSiteMapNode title="List of DimEmployees" controller="DimEmployees" action="Index">
+      <mvcSiteMapNode title="Create" controller="DimEmployees" action="Create">
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Delete" controller="DimEmployees" action="Delete">
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Details" controller="DimEmployees" action="Details">
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Edit" controller="DimEmployees" action="Edit">
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="List of Countries" controller="Countries" action="Index"/>
+
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

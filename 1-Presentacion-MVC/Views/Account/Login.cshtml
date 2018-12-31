@@ -1,0 +1,54 @@
+﻿@model _1_Presentacion_MVC.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">@ViewBag.Title</h4>
+            </div>
+            <div class="card-block">
+                <div class="form-body">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.")
+
+                    <h3 class="box-title">You must log in to complete that action. Enter your credentials below.</h3>
+
+                        <hr/>
+                        <br/>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(m => m.UserName, new { @class = "col-sm-3 text-right control-label col-form-label" })
+                            <div class="col-sm-9">
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Username" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-sm-3 text-right control-label col-form-label" })
+                            <div class="col-sm-9">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                        </div>*@
+                        <div class="form-group m-b-0">
+                            <div class="offset-sm-3 col-sm-9">
+                                <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Log in</button>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

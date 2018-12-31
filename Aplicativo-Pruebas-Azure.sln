@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Presentacion-MVC", "1-Presentacion-MVC\1-Presentacion-MVC.csproj", "{FC3270F9-AF5B-4E5F-8783-E8AAAE70EB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-Pruebas_TDD.Tests", "6-Pruebas_TDD.Tests\6-Pruebas_TDD.Tests.csproj", "{63DCFA88-E0EF-4269-82AC-9A5982F4977E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Servicios-API", "2-Servicios-API\2-Servicios-API.csproj", "{F1D6A510-1102-41C9-89AF-3968AD2BBD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Negocio", "3-Negocio\3-Negocio.csproj", "{BE3090F4-5BA3-411F-B767-706661E8757A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Datos", "4-Datos\4-Datos.csproj", "{EB6D20C1-16BD-4E30-9D2B-9D925A4879BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-InterfazComun", "5-InterfazComun\5-InterfazComun.csproj", "{21404AD9-BBA1-480D-AFE1-AF628FB2F18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-PruebaCargaRendimiento", "7-PruebaCargaRendimiento\7-PruebaCargaRendimiento.csproj", "{32B3D683-E48F-4588-B2FF-B5045CE90553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC3270F9-AF5B-4E5F-8783-E8AAAE70EB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3270F9-AF5B-4E5F-8783-E8AAAE70EB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3270F9-AF5B-4E5F-8783-E8AAAE70EB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3270F9-AF5B-4E5F-8783-E8AAAE70EB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DCFA88-E0EF-4269-82AC-9A5982F4977E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DCFA88-E0EF-4269-82AC-9A5982F4977E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DCFA88-E0EF-4269-82AC-9A5982F4977E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DCFA88-E0EF-4269-82AC-9A5982F4977E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D6A510-1102-41C9-89AF-3968AD2BBD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D6A510-1102-41C9-89AF-3968AD2BBD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D6A510-1102-41C9-89AF-3968AD2BBD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D6A510-1102-41C9-89AF-3968AD2BBD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3090F4-5BA3-411F-B767-706661E8757A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3090F4-5BA3-411F-B767-706661E8757A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3090F4-5BA3-411F-B767-706661E8757A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3090F4-5BA3-411F-B767-706661E8757A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB6D20C1-16BD-4E30-9D2B-9D925A4879BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6D20C1-16BD-4E30-9D2B-9D925A4879BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6D20C1-16BD-4E30-9D2B-9D925A4879BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6D20C1-16BD-4E30-9D2B-9D925A4879BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21404AD9-BBA1-480D-AFE1-AF628FB2F18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21404AD9-BBA1-480D-AFE1-AF628FB2F18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21404AD9-BBA1-480D-AFE1-AF628FB2F18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21404AD9-BBA1-480D-AFE1-AF628FB2F18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B3D683-E48F-4588-B2FF-B5045CE90553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B3D683-E48F-4588-B2FF-B5045CE90553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B3D683-E48F-4588-B2FF-B5045CE90553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B3D683-E48F-4588-B2FF-B5045CE90553}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8ECA0CA-9EC6-4C23-B54C-3CEB71CB9C2E}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://breinergonza.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = 1-Presentacion-MVC\\1-Presentacion-MVC.csproj
+		SccProjectName1 = 1-Presentacion-MVC
+		SccLocalPath1 = 1-Presentacion-MVC
+		SccProjectUniqueName2 = 2-Servicios-API\\2-Servicios-API.csproj
+		SccProjectName2 = 2-Servicios-API
+		SccLocalPath2 = 2-Servicios-API
+		SccProjectUniqueName3 = 3-Negocio\\3-Negocio.csproj
+		SccProjectName3 = 3-Negocio
+		SccLocalPath3 = 3-Negocio
+		SccProjectUniqueName4 = 4-Datos\\4-Datos.csproj
+		SccProjectName4 = 4-Datos
+		SccLocalPath4 = 4-Datos
+		SccProjectUniqueName5 = 5-InterfazComun\\5-InterfazComun.csproj
+		SccProjectName5 = 5-InterfazComun
+		SccLocalPath5 = 5-InterfazComun
+		SccProjectUniqueName6 = 6-Pruebas_TDD.Tests\\6-Pruebas_TDD.Tests.csproj
+		SccProjectName6 = 6-Pruebas_TDD.Tests
+		SccLocalPath6 = 6-Pruebas_TDD.Tests
+		SccProjectUniqueName7 = 7-PruebaCargaRendimiento\\7-PruebaCargaRendimiento.csproj
+		SccProjectName7 = 7-PruebaCargaRendimiento
+		SccLocalPath7 = 7-PruebaCargaRendimiento
+	EndGlobalSection
+EndGlobal

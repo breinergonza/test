@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c157ab82d21249a9a7ed4f06692c38b8" Name="Diagram1">
+        <EntityTypeShape EntityType="ModeloDB.DimAccount" Width="1.5" PointX="3.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimChannel" Width="1.5" PointX="3.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimCurrency" Width="1.5" PointX="3.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimCustomer" Width="1.5" PointX="3.75" PointY="52.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimDate" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimEmployee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimEntity" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimGeography" Width="1.5" PointX="1.5" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimMachine" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimOutage" Width="1.5" PointX="0.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimProduct" Width="1.5" PointX="3.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimProductCategory" Width="1.5" PointX="1.5" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimProductSubcategory" Width="1.5" PointX="1.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimPromotion" Width="1.5" PointX="6.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimSalesTerritory" Width="1.5" PointX="3.75" PointY="60.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimScenario" Width="1.5" PointX="3.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.DimStore" Width="1.5" PointX="3.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactExchangeRate" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactInventory" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactITMachine" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactITSLA" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactOnlineSales" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactSales" Width="1.5" PointX="9" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactSalesQuota" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloDB.FactStrategyPlan" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactExchangeRate_DimCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactInventory_DimCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimCustomer_DimGeography" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactExchangeRate_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactInventory_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITMachine_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITSLA_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimDate" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimEmployee_DimEmployee" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimSalesTerritory_DimGeography" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimStore_DimGeography" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimMachine_DimStore" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITMachine_DimMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITSLA_DimMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITSLA_DimOutage" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimProduct_DimProductSubcategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactInventory_DimProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_DimProductSubcategory_DimProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimPromotion" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimScenario" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactStrategyPlan_DimScenario" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactInventory_DimStore" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactITSLA_DimStore" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSales_DimStore" ManuallyRouted="false" />
+        <AssociationConnector Association="ModeloDB.FK_FactSalesQuota_DimStore" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

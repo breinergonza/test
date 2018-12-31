@@ -1,0 +1,125 @@
+﻿@model IEnumerable<_1_Presentacion_MVC.Models.Countries>
+
+@{
+    ViewBag.Title = "Countries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">@ViewBag.vista</h4>
+
+                <div class="table-responsive m-t-40">
+                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.alpha2Code)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.alpha3Code)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.capital)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.region)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.subregion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.population)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.demonym)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.area)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.gini)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nativeName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.numericCode)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.translations)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.flag)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.cioc)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.alpha2Code)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.alpha3Code)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.capital)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.region)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.subregion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.population)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.demonym)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.area)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.gini)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nativeName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.numericCode)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.translations)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.flag)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cioc)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
